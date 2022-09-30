@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Memory Game</title>
-</head>
+  </head>
 
-<body>
-
-
-
-    <div class="container icon-grid" id="griglia">
-    </div>
-    <div class="container text-center">
-        <input type="button" id="button" class="button" onclick=startGame() value="Ricomincia">
-        <div class="timer">Tempo: 0 min 0 sec</div>
-    </div>
-
-    <div id="modal">
-        <div class="content">
-            <h2>Congratulazioni! Hai risolto il gioco in: </h2>
-            <p><span id="tempoTrascorso"> </span> </p>
-            <p><input type="button" class="button" onclick=playAgain() value="Altra partita"></p>
+  <body>
+    <div class="game">
+      <div class="board-container text-center">
+        <div class="board" data-dimension="4"></div>
+        <div class="win">You won!</div>
+      </div>
+      <div class="controls">
+        <button>Start</button>
+        <div class="stats">
+          <div class="timer">time: 0 sec</div>
         </div>
+      </div>
     </div>
 
-    <script src="js/memory.js">
-    </script>
-</body>
-
+    <script src="./js/memory.js"></script>
+  </body>
 </html>
