@@ -13,15 +13,37 @@
   </head>
 
   <body>
+    <h1>MEMORY GAME</h1>
     <div class="game">
-      <div class="board-container text-center">
-        <div class="board" data-dimension="4"></div>
-        <div class="win">You won!</div>
-      </div>
-      <div class="controls">
-        <button>Start</button>
-        <div class="stats">
-          <div class="timer">time: 0 sec</div>
+      <div class="memory-card" onclick="flip(event)">🔹</div>
+      <div class="memory-card" onclick="flip(event)">🔸</div>
+      <div class="memory-card" onclick="flip(event)">🔅</div>
+      <div class="memory-card" onclick="flip(event)">🔺</div>
+      <div class="memory-card" onclick="flip(event)">💢</div>
+      <div class="memory-card" onclick="flip(event)">❗</div>
+      <div class="memory-card" onclick="flip(event)">🔸</div>
+      <div class="memory-card" onclick="flip(event)">💢</div>
+      <div class="memory-card" onclick="flip(event)">🔹</div>
+      <div class="memory-card" onclick="flip(event)">❗</div>
+      <div class="memory-card" onclick="flip(event)">🔺</div>
+      <div class="memory-card" onclick="flip(event)">⭕</div>
+      <div class="memory-card" onclick="flip(event)">❌</div>
+      <div class="memory-card" onclick="flip(event)">❌</div>
+      <div class="memory-card" onclick="flip(event)">⭕</div>
+      <div class="memory-card" onclick="flip(event)">🔅</div>
+    </div>
+    <div>
+      <div id="timer"></div>
+      <button onclick="restartGame()">RESTART</button>
+    </div>
+    <div>
+      <div id="modal" class="invisible">
+        <div id="modal-body">
+          <h2>You won the game!</h2>
+          <div id="total-time"></div>
+          <div id="button-area">
+            <button id="modal-button">RESTART</button>
+          </div>
         </div>
       </div>
     </div>
