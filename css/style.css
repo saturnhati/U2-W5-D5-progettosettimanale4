@@ -8,10 +8,6 @@ body {
     text-align: center;
 }
 
-.game {
-    margin: 0 auto;
-}
-
 button {
     border: none;
     margin-top: 12px;
@@ -85,6 +81,7 @@ h2 {
     border-radius: 4px;
     padding: 12px;
     width: 500px;
+    margin: 0 auto;
 }
 
 .memory-card {
@@ -96,7 +93,6 @@ h2 {
     height: 130px;
     font-size: 0;
     border-radius: 4px;
-
 }
 
 .flipped {
@@ -124,5 +120,15 @@ h2 {
     100% {
         transform: rotateY(180deg);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .game {
+        width: 250px;
+    }
+    .memory-card {
+        width: 50px;
+        height: 65px;
     }
 }
